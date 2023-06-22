@@ -1,0 +1,19 @@
+h2 {
+  font-size: 46px;
+  margin: 50px;
+}
+
+h3 {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+div {
+  padding-top: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}

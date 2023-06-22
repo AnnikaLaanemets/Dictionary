@@ -1,3 +1,16 @@
 .container {
   text-align: center;
+  margin: 60px auto;
+  padding: 50px;
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 52px;
+  margin: 60px;
+}
+
+footer {
+  margin: 100px;
+  font-size: 18px;
 }

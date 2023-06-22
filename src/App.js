@@ -9,7 +9,11 @@ function App() {
         <main>
           <Dictionary />
         </main>
-        <footer>Made by Annika</footer>
+        <footer>
+          <a href="https://github.com/AnnikaLaanemets/Dictionary">
+            https://github.com/AnnikaLaanemets/Dictionary
+          </a>
+        </footer>
       </div>
     </div>
   );
