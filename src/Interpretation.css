@@ -1,19 +1,25 @@
 h2 {
-  font-size: 46px;
-  margin: 50px;
+  font-size: 28px;
+  text-transform: capitalize;
 }
 
 h3 {
-  color: gray;
-  margin-bottom: 40px;
-}
-
-div {
-  padding-top: 20px;
+  font-size: 24px;
 }
 
 p {
   margin: 0;
   padding: 0;
   line-height: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding-right: 10px;
+  line-right: 1;
 }

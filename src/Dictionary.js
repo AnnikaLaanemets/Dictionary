@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 import Interpretation from "./Interpretation";
 
 export default function Dictionary() {
@@ -23,9 +24,18 @@ export default function Dictionary() {
   if (interpretation) {
     return (
       <div className="dictionary">
-        <form onSubmit={search}>
-          <input type="search" onChange={handleSubmit}></input>
-        </form>
+        <section>
+          <form onSubmit={search}>
+            <input
+              type="text"
+              placeholder="🔍 Search word"
+              autoComplete="off"
+              autoFocus="on"
+              onChange={handleSubmit}
+            ></input>
+          </form>
+        </section>
+
         <div>
           <Interpretation interpretation={interpretation} />
         </div>
@@ -34,9 +44,20 @@ export default function Dictionary() {
   } else {
     return (
       <div className="Dictionary">
-        <form onSubmit={search}>
-          <input type="search" onChange={handleSubmit}></input>
-        </form>
+        <section>
+          <form onSubmit={search}>
+            <input
+              type="text"
+              placeholder="🔍 Search word"
+              autoComplete="off"
+              autoFocus="on"
+              onChange={handleSubmit}
+            ></input>
+          </form>
+          <p className="mt-4 fs-5 text-muted">
+            i.e. celestial, contemporary, silhouette, verdant
+          </p>
+        </section>
       </div>
     );
   }
