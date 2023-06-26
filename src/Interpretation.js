@@ -4,7 +4,6 @@ import "./App.css";
 import "./Interpretation.css";
 
 export default function Interpretation(props) {
-  console.log(props.interpretation);
   if (props.interpretation) {
     return (
       <div className="interpretations">

@@ -23,3 +23,7 @@ li {
   padding-right: 10px;
   line-right: 1;
 }
+
+img {
+  border-radius: 3px;
+}

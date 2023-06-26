@@ -6,7 +6,7 @@ body {
   );
 }
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: 10px auto;
   font-size: 17px;
   color: #251b37;
@@ -14,8 +14,8 @@ body {
 
 section {
   background-color: #ffecef;
-  margin: 25px;
-  padding: 40px;
+  margin: 12px;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 3px 8px 14px rgba(37, 27, 55, 0.2);
 }
