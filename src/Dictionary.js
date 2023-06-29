@@ -13,18 +13,18 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   function handleImages(response) {
-    console.log(response);
     setPhotos(response.data.photos);
   }
 
   function handleResponse(response) {
-    setInterpretation(response.data);
+    console.log(response);
+    setInterpretation(response.data[0]);
   }
 
   function search(event) {
     event.preventDefault();
     let apiKey = "baf15f814713odta8a4baa99ed0733e5";
-    let url = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(url).then(handleResponse);
     let picturesUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
     axios.get(picturesUrl).then(handleImages);

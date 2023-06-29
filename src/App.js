@@ -10,9 +10,9 @@ function App() {
           <Dictionary />
         </main>
         <footer>
-          <a href="https://github.com/AnnikaLaanemets/Dictionary">
-            https://github.com/AnnikaLaanemets/Dictionary
-          </a>
+          Open&nbsp;
+          <a href="https://github.com/AnnikaLaanemets/Dictionary">source</a>
+          &nbsp;code by Annika Laanemets
         </footer>
       </div>
     </div>

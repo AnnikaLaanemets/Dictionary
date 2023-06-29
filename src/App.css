@@ -6,16 +6,17 @@ body {
   );
 }
 .container {
-  max-width: 600px;
+  max-width: 576px;
   margin: 10px auto;
-  font-size: 17px;
+  font-size: 18px;
   color: #251b37;
+  font-family: "Bellota", cursive;
 }
 
 section {
   background-color: #ffecef;
   margin: 12px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 3px 8px 14px rgba(37, 27, 55, 0.2);
 }
@@ -31,19 +32,41 @@ input {
 }
 
 a {
-  color: #9f6464;
+  color: #6b4d4d;
 }
 
 h1 {
   font-size: 28px;
-  margin: 20px;
+  font-weight: 700;
+  margin: 40px;
   text-align: center;
   color: #382e4e;
   opacity: 0.7;
 }
 
 footer {
-  margin: 100px;
+  margin: 60px;
   font-size: 18px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 320px;
+    font-size: 14px;
+    padding: 0;
+  }
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 2px;
+  }
+  footer {
+    font-size: 12px;
+    margin: 0;
+    padding-top: 30px;
+  }
 }

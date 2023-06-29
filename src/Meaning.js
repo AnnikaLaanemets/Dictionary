@@ -1,6 +1,6 @@
 import React from "react";
 import "./Interpretation.css";
-import GetSynonym from "./GetSynonym";
+import Synonym from "./Synonym";
 
 export default function Meaning(props) {
   function Example() {
@@ -15,16 +15,19 @@ export default function Meaning(props) {
       return null;
     }
   }
-
   return (
     <div className="meanings">
-      <div class="row">
-        <p class="col-3">{props.meaning.meanings[props.index].partOfSpeech}</p>
-        <p class="col-9">{props.meaning.meanings[props.index].definition}</p>
+      <div className="row">
+        <p className="col-3">
+          {props.meaning.meanings[props.index].partOfSpeech}
+        </p>
+        <p className="col-9">
+          {props.meaning.meanings[props.index].definitions[0].definition}
+        </p>
       </div>
       <div>{Example()}</div>
       <div>
-        <GetSynonym
+        <Synonym
           synonyms={props.meaning.meanings[props.index].synonyms}
           index={props.index}
         />
