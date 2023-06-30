@@ -8,7 +8,7 @@ body {
 .container {
   max-width: 576px;
   margin: 10px auto;
-  font-size: 18px;
+  font-size: 20px;
   color: #251b37;
   font-family: "Bellota", cursive;
 }
@@ -17,12 +17,11 @@ section {
   background-color: #ffecef;
   margin: 12px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 3px 8px 14px rgba(37, 27, 55, 0.2);
 }
 
 input {
-  color: #ffcaca;
   width: 98%;
   padding: 6px 3px;
   border: 1px solid #251b37;
@@ -44,8 +43,13 @@ h1 {
   opacity: 0.7;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 46px;
+}
+
 footer {
-  margin: 60px;
+  margin: 40px;
   font-size: 18px;
   text-align: center;
 }
@@ -53,7 +57,7 @@ footer {
 @media (max-width: 576px) {
   .container {
     max-width: 320px;
-    font-size: 14px;
+    font-size: 17px;
     padding: 0;
   }
   section {
@@ -67,6 +71,6 @@ footer {
   footer {
     font-size: 12px;
     margin: 0;
-    padding-top: 30px;
+    padding-top: 10px;
   }
 }

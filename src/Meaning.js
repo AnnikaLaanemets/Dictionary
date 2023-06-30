@@ -1,37 +1,43 @@
 import React from "react";
-import "./Interpretation.css";
 import Synonym from "./Synonym";
 
 export default function Meaning(props) {
-  function Example() {
-    let example = props.meaning.meanings[props.index].example;
+  let definitions = props.meaning.definitions;
+
+  function Example({ example }) {
     if (example) {
       return (
-        <p className="text-secondary mt-3 fs-6">
-          Example:&nbsp;<em>{example}</em>
-        </p>
+        <div className="mt-3 ms-3">
+          Example: <em className=" fs-6 text-secondary">{example}</em>
+        </div>
       );
     } else {
       return null;
     }
   }
+
   return (
     <div className="meanings">
-      <div className="row">
-        <p className="col-3">
-          {props.meaning.meanings[props.index].partOfSpeech}
-        </p>
-        <p className="col-9">
-          {props.meaning.meanings[props.index].definitions[0].definition}
-        </p>
-      </div>
-      <div>{Example()}</div>
-      <div>
-        <Synonym
-          synonyms={props.meaning.meanings[props.index].synonyms}
-          index={props.index}
-        />
-      </div>
+      {definitions.map(function (definition, index) {
+        if (index < 3) {
+          return (
+            <section key={index}>
+              <div className="row">
+                <p className="col-3 mt-4">{props.meaning.partOfSpeech}</p>
+                <p className="col-9 mt-4">{definition.definition}</p>
+                <div>
+                  <Example example={definition.example} />
+                </div>
+                <div>
+                  <Synonym synonyms={props.meaning.synonyms} />
+                </div>
+              </div>
+            </section>
+          );
+        } else {
+          return null;
+        }
+      })}
     </div>
   );
 }

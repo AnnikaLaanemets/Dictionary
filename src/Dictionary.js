@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./App.css";
 import Interpretation from "./Interpretation";
 import Photos from "./Photos";
 
@@ -17,16 +16,18 @@ export default function Dictionary() {
   }
 
   function handleResponse(response) {
-    console.log(response);
     setInterpretation(response.data[0]);
   }
-
+  function error() {
+    alert(`No exact match found for "${keyword}"`);
+  }
   function search(event) {
     event.preventDefault();
     let apiKey = "baf15f814713odta8a4baa99ed0733e5";
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-    axios.get(url).then(handleResponse);
     let picturesUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+
+    axios.get(url).then(handleResponse).catch(error);
     axios.get(picturesUrl).then(handleImages);
   }
 

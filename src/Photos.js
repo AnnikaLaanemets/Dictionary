@@ -1,5 +1,4 @@
 import React from "react";
-import "./Interpretation.css";
 
 export default function Photos(props) {
   if (props.photos) {
